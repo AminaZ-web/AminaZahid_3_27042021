@@ -358,12 +358,7 @@
 		margin-top: 13rem;
 	}
 
-   .menu__slide{
-      background: $tertiaire;
-
-   }
-   /*
-	@keyframes check
+	@keyframes checkbox
 	{
 		to
 		{
@@ -376,7 +371,7 @@
 		}
 
 	}
-
+/*
 	 @keyframes circle
 	{
 		to
@@ -391,24 +386,31 @@
 			width: 10%;
 		}
 	}
-
+*/
 	
-	.fa-check-circle
-	{
-		font-size: 14px;
-		color: white;
-		background-color: #99E2D0;
-		width: 10%;
-		padding: 15px;
-		display: flex;
-		text-align: center;
-		/* &:hover
-		{
-			animation: circle 200ms 100ms;
-		}
+	
+	.checkbox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 10.9rem;
+	&:hover{
 
-		*/
+		animation: checkbox 2s both;
 	}
+  }
+  .fa-check-circle {
+    font-size: 20px;
+    color: white;
+    background-color: #99E2D0;
+    width: 5%;
+    height: 26px;
+    padding: 16px;
+    margin-bottom: 9px;
+    border-radius: 0px 20px 20px 0px;
+    position: relative;
+    left: 21.6rem;
+    text-align: center;
 
 
 	.menu
@@ -529,6 +531,8 @@
       font-weight: lighter;
 	}
 
+
+
    .coeur__2{
       position: relative;
 		font-size: 25px;
@@ -556,7 +560,7 @@
 	/* Footer */
 	footer
 	{
-		background: #353535;
+		background:#414141;
 		padding: 25px;
 		.footer__titre
 		{
@@ -571,9 +575,14 @@
 			color:white;
 			font-size: 16px;
 		}
-
+	}
 		.fa-utensils,.fa-hands-helping
 		{
 			margin-right: 15px;
 		}
-	}
+
+
+
+.acceuil__localisation{
+	color: #414141;
+}

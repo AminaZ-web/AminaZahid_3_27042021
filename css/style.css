@@ -204,8 +204,8 @@
     padding: 5px 10px;
     position: absolute;
     z-index: 2;
-    left: 20px;
-    margin-top: 8rem;
+    left: 36px;
+    margin-top: 5.8rem;
   }
   .fct__num1 {
     top: 25.8rem;
@@ -340,21 +340,23 @@
     position: relative;
     margin-top: 13rem;
   }
-  /*
-	@keyframes check
+  
+	@keyframes checkbox
 	{
 		to
 		{
 			transform: translateX(0) ;
+      opacity: 0;
 		}
 
 		from
 		{
-			transform: translateX(999px);
+			transform: translateX(60px);
+      opacity: 1;
 		}
 
 	}
-
+/*
 	 @keyframes circle
 	{
 		to
@@ -371,39 +373,45 @@
 	}
 
 	*/
+
+  .checkbox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 10.9rem;
+    height: 40px;
+  }
+
   .fa-check-circle {
-    font-size: 14px;
+    font-size: 20px;
     color: white;
     background-color: #99E2D0;
-    width: 10%;
-    padding: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    /* &:hover
-		{
-			animation: circle 200ms 100ms;
-		}
-
-		*/
-  }
-  .check {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    width: 5%;
+    height: 26px;
+    padding: 16px;
+    margin-bottom: 9px;
+    border-radius: 0px 20px 20px 0px;
     position: relative;
-    bottom: 30px;
+    left: 21.6rem;
+    text-align: center;
     opacity: 0;
-    cursor: pointer;
   }
-  .check:hover {
-    -webkit-animation: check 1s both;
-            animation: check 1s both;
+  .fa-check-circle:hover{
+    animation: checkbox 1s 0.5s forwards;
+   
+    
+  }
+  
+
+  .menu__titre__plats{
+     
+    font-size: 16px;
+    margin-left: 2rem;
+    border-bottom: #99E2D0 solid 2px;
+    width: 2.5rem;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   .menu .menu__titre {
     font-size: 16px;
@@ -411,8 +419,8 @@
     border-bottom: #99E2D0 solid 2px;
     width: 2.5rem;
     padding-bottom: 5px;
-    margin-top: 75px;
     margin-bottom: 0px;
+    margin-top: 75px;
   }
   .menu .menubloc {
     background: white;
@@ -503,11 +511,7 @@
     margin-bottom: 7rem;
     top: 4rem;
   }
-  .check:hover {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  
   /* Coeur */
   @-webkit-keyframes coeur {
     from {
@@ -525,97 +529,49 @@
       opacity: 1;
     }
   }
-  .far {
-    position: relative;
-    font-size: 25px;
-    left: 17rem;
-    bottom: 3rem;
-    font-weight: lighter;
-  }
-  .fas {
-    position: relative;
-    font-size: 25px;
-    opacity: 0;
-    left: 246px;
-    bottom: 3rem;
-    display: inline;
-  }
-  .fas:hover {
-    -webkit-animation: coeur 1s both;
-            animation: coeur 1s both;
-    cursor: pointer;
-    font-size: 27px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+
+
+  .coeur__1
+	{
+		
+		position:relative;	
+		font-size: 25px;
+      left: 17rem;
+      bottom: 3rem;
+      font-weight: lighter;
+	}
+
+
+
+   .coeur__2{
+      position: relative;
+		font-size: 25px;
+      opacity: 0;
+      left: 244px;
+      bottom: 3rem;
+      display: inline;
+
+    }
+      .coeur__2:hover{
+        -webkit-animation:coeur 1s both;
+         animation: coeur 1s both;
+         cursor: pointer  ;
+         background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+         background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+      -webkit-background-clip: text;
+       -webkit-text-fill-color:transparent;
+   }
+  
   /* coeur resto */
   .resto__coeur {
     position: relative;
     margin-left: 5rem;
     top: 5.6rem;
   }
-  /*
-	.fa-heart::before
-	{
-		content: "";
-		transition: color 1s ease-out;
-	}
-
-	.fa-heart:hover::before
-	{
-		color: $secondaire;
-		cursor: pointer;
-	}
-
-	/*.fa-heart
-	{
-		font-family: "Font Awesome 5 Free";
-		position: relative;
-		left: 18rem;
-		bottom: 3rem;
-		font-size: 25px;
-		color: black;
-	}
-
-	.fa-heart:hover
-	{
-		transform: scale(1);
-		background: linear-gradient(to top left,$primaire 20%, $secondaire,);
-	}
-
-	/* .fa-heart:hover
-	{
-		font-size: 3em;
-		color: black;
-		background-color: #9356DC;
-		transform: scaleX(1);
-		animation : coeur-like 1000ms;
-	}
-
-	@keyframes coeur-like
-	{
-		0%
-		{
-			transform: scaleX(0);
-		}
-
-		50%
-		{
-			transform: scale(0.5);
-		}
-
-		100%
-		{
-			transform: scaleX(1);
-		}
-	}
-
-	*/
+  
   /* Footer */
   footer {
-    background: #353535;
+    background:#414141;
     padding: 25px;
   }
   footer .footer__titre {
