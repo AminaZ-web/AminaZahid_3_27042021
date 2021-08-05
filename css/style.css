@@ -59,7 +59,7 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 50%;
+  height: auto;
   z-index: 0;
   position: fixed;
 }
@@ -331,18 +331,6 @@ i.fas.fa-arrow-left {
   margin-top: 13rem;
 }
 
-@keyframes check{
-  from{
-     
-      transform: translateX(0);
-      opacity: 0;
-  }
-
-  to{
-      transform: translateX(60px);
-      opacity: 1;
-  }
-}
 
 
 
@@ -622,13 +610,8 @@ footer .fa-utensils, footer .fa-hands-helping {
   border-right-color: #FF79DA;
   border-left-color: #FF79DA;
    -webkit-animation: spin 800ms linear infinite;
-  animation: spin 800ms 2s ease-in-out infinite;
- 
-  
-  
+  animation: spin 800ms 2s ease-in-out infinite; 
 }
-
-
 
 
 @keyframes transition{
@@ -1235,11 +1218,6 @@ footer .fa-utensils, footer .fa-hands-helping {
   footer .fa-utensils, footer .fa-hands-helping {
     margin-right: 15px;
   }
-
-
-
-
-
 /*#
 
 
