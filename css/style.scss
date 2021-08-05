@@ -496,7 +496,7 @@
 	{
 		@include btn_grand();
 		position: relative;
-		left: 6rem;
+		left: 20rem;
 		margin-bottom: 7rem;
 		top: 4rem;
 	}
@@ -560,7 +560,7 @@
 	/* Footer */
 	footer
 	{
-		background:#414141;
+		background:pink;
 		padding: 25px;
 		.footer__titre
 		{
@@ -582,7 +582,3 @@
 		}
 
 
-
-.acceuil__localisation{
-	color: #414141;
-}
