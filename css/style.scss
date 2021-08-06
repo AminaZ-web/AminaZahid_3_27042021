@@ -42,6 +42,15 @@
 	animation: spin 800ms 2s ease-in-out infinite; 
   }
 
+  @keyframes spin{
+	from{
+	  transform: rotate(0);
+	}
+	to{
+	  transform: rotate(360deg);
+	}
+  }
+
 @-webkit-keyframes apparition {
 	from {
 	  -webkit-transform: translateY(0);
