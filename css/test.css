@@ -6,45 +6,76 @@
     margin-top: 13rem;
   }
 
-@keyframes check{
-    from{
-        transform: translateX(0);
-        opacity: 0;
-    }
-
-    to{
-        transform: translateX(60px);
-        opacity: 1;
-    }
+.menubloc{
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
-.testbox{
-    height: 2px;
-    position: relative;
-    bottom: 3rem;
-    right: 2rem;
+.menu__text{
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 16px;
 }
 
-.fa-check-circle {
-    font-size: 20px;
-    color: white;
-    background-color: #99E2D0;
-    width: 5%;
-    height: 26px;
-    padding: 16px;
-    margin-bottom: 9px;
-    border-radius: 0px 20px 20px 0px;
-    position: relative;
-    left: 21.6rem;
-    text-align: center;
+h2{
+  margin-bottom: 0px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.menu__presentation{
+  font-size: 14px;
+  margin: 0px;
+}
+
+.menu__prix{
+  align-self: flex-end;
+}
+.checkbox{
+  display: flex;
+    background: lightblue;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
     opacity: 0;
-    
-    }
-    .fa-check-circle:hover {
-         animation: check 1s 0.5s reverse both ;
-    }
-   
+    transition-duration: 0.7s;
+}
 
+ .checkbox:hover{
+  margin-right: -22px;
+  cursor: pointer;
+  animation:check 2s ease-in-out forwards;
+}
+
+.menubloc:hover > i{
+  animation:check 2s ease-in-out forwards;
+}
+
+i{
+  color: white;
+  font-size: 20px;
+}
+   
+.menublock:hover i{
+  transform: rotate(1turn);
+  transition: 450ms 200ms ease-out;
+}
+
+@keyframes check {
+  from{
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to{
+    transform:translateX(0);
+    opacity: 1;
+  }
+  
+}
 
 
     .menu__titre__plats{

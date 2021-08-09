@@ -3,10 +3,10 @@
 /* Loader */
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
-  z-index: 9999;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,8 +16,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-animation: transition 3s ease both;
-  animation: transition 3s ease both;
+  -webkit-animation: loadfond 3s ease 1.5s both;
+  animation: loadfond 3s ease 1.5s both;
 }
 
 .load {
@@ -36,8 +36,30 @@
   border-bottom-color: #9356DC;
   border-right-color: #FF79DA;
   border-left-color: #FF79DA;
-  -webkit-animation: spin 800ms linear infinite;
-  animation: spin 800ms 2s ease-in-out infinite;
+  -webkit-animation: spin 2s ease-in-out infinite;
+  animation: spin 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes loadfond {
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+@keyframes loadfond {
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
 }
 
 @-webkit-keyframes spin {
@@ -125,11 +147,9 @@ header {
 
 .imagebg {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  height: auto;
-  z-index: 0;
-  position: fixed;
+  height: 15.66rem;
 }
 
 .imagebg_r2 {
@@ -203,7 +223,7 @@ header {
 .explorer__btn {
   text-align: center;
   margin-bottom: 50px;
-  width: 50%;
+  width: 20%;
   cursor: pointer;
   border: lightgray;
   border-radius: 20px 20px 20px 20px;
@@ -237,12 +257,11 @@ header {
 
 .index__titre {
   font-size: 25px;
-  margin-left: 1rem;
   margin-top: 30px;
-  padding-top: 27px;
+  padding-top: 45px;
   font-family: Roboto;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 45px;
 }
 
 .fct__choix {
@@ -294,22 +313,11 @@ header {
   border-radius: 50%;
   color: white;
   padding: 5px 10px;
-  position: absolute;
+  position: unset;
   z-index: 2;
-  left: 36px;
-  margin-top: 5.8rem;
-}
-
-.fct__num1 {
-  top: 25.8rem;
-}
-
-.fct__num2 {
-  top: 30rem;
-}
-
-.fct__num3 {
-  top: 35rem;
+  left: 0px;
+  margin-right: -20px;
+  margin-top: 0rem;
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
@@ -448,7 +456,7 @@ i.fas.fa-arrow-left {
   border-radius: 45px 45px 0px 0px;
   z-index: 1;
   position: relative;
-  margin-top: 13rem;
+  margin-top: 0rem;
 }
 
 @-webkit-keyframes circle {
@@ -690,64 +698,6 @@ footer .fa-utensils, footer .fa-hands-helping {
 
 @media screen and (max-width: 480px) {
   /* Variable */
-  /* Loader */
-  .container {
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    z-index: 9999;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-animation: transition 3s ease both;
-    animation: transition 3s ease both;
-  }
-  .load {
-    border-radius: 50px;
-    border: 5px solid transparent;
-    display: inline-block;
-    position: relative;
-    right: 5px;
-    left: 5px;
-    top: 5px;
-    bottom: 5px;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    border-right-color: #FF79DA;
-    border-left-color: #FF79DA;
-    -webkit-animation: spin 800ms linear infinite;
-    animation: spin 800ms 2s ease-in-out infinite;
-  }
-  @-webkit-keyframes spin {
-    from {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
-    from {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
   /* Keyframes */
   @-webkit-keyframes apparition {
     from {
@@ -807,8 +757,7 @@ footer .fa-utensils, footer .fa-hands-helping {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
-    z-index: 0;
-    position: fixed;
+    height: 15.66rem;
   }
   /* Localisation */
   .acceuil__localisation {
@@ -899,12 +848,11 @@ footer .fa-utensils, footer .fa-hands-helping {
   }
   .index__titre {
     font-size: 25px;
-    margin-left: 1rem;
     margin-top: 30px;
-    padding-top: 27px;
+    padding-top: 45px;
     font-family: Roboto;
     position: relative;
-    margin-left: 2rem;
+    margin-left: 45px;
   }
   .fct__choix {
     display: -webkit-box;
@@ -949,19 +897,11 @@ footer .fa-utensils, footer .fa-hands-helping {
     border-radius: 50%;
     color: white;
     padding: 5px 10px;
-    position: absolute;
+    position: unset;
     z-index: 2;
-    left: 35px;
-    margin-top: 5.8rem;
-  }
-  .fct__num1 {
-    top: 25.8rem;
-  }
-  .fct__num2 {
-    top: 30rem;
-  }
-  .fct__num3 {
-    top: 35rem;
+    left: 0px;
+    margin-right: -20px;
+    margin-top: 0rem;
   }
   .fa-mobile-alt, .fa-list-ul, .fa-store {
     color: #7a7a7a;
@@ -1009,7 +949,7 @@ footer .fa-utensils, footer .fa-hands-helping {
     border-radius: 25px;
     -webkit-box-shadow: 0px 5px 10px lightgray;
             box-shadow: 0px 5px 10px lightgray;
-    width: 330px;
+    width: 320px;
     margin-bottom: 10px;
     position: relative;
     -webkit-transition: 0.5s;
@@ -1020,7 +960,7 @@ footer .fa-utensils, footer .fa-hands-helping {
             transform: scale(1.06);
   }
   .resto .resto__plat__img {
-    width: 330px;
+    width: 320px;
     height: 180px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1085,7 +1025,7 @@ footer .fa-utensils, footer .fa-hands-helping {
     border-radius: 45px 45px 0px 0px;
     z-index: 1;
     position: relative;
-    margin-top: 13rem;
+    margin-top: -3rem;
   }
   @-webkit-keyframes check {
     to {
@@ -1162,6 +1102,12 @@ footer .fa-utensils, footer .fa-hands-helping {
   }
   .menu .menubloc {
     background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border: lightgray;
     border-radius: 20px 20px 20px 20px;
     -webkit-box-shadow: 0px 2px 5px 1px lightgrey;
@@ -1176,22 +1122,6 @@ footer .fa-utensils, footer .fa-hands-helping {
     -webkit-animation: apparition 1s both;
             animation: apparition 1s both;
     overflow: hidden;
-    /* &.menubloc__1
-			{
-				animation: apparition 1s both;
-			}
-
-			&.menubloc__2
-			{
-				animation: apparition 2s both;
-			}
-
-			&.menubloc__3
-			{
-				animation: apparition 3s both;
-			}
-
-			*/
   }
   .menu .menubloc:hover {
     cursor: pointer;
@@ -1202,7 +1132,7 @@ footer .fa-utensils, footer .fa-hands-helping {
     -webkit-animation: check 1s forwards;
             animation: check 1s forwards;
   }
-  .menu .menubloc > h2 {
+  .menu .menu__part__1 > h2 {
     font-size: 16px;
     font-weight: bolder;
     margin-left: 1rem;
