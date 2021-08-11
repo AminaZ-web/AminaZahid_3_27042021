@@ -690,12 +690,12 @@ h2
 	color: white;
 	background: -webkit-gradient(linear, right bottom, left top, color-stop(20%, #9356DC), to(#FF79DA));
 	background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
-	position: relative;
-	left: 37rem;
-	margin-bottom: 7rem;
-	top: 4rem;
 }
-
+.btn__commande{
+	display: flex;
+	justify-content: center;
+	margin-top: 65px;
+}
 /* Coeur */
 @-webkit-keyframes coeur
 {
@@ -756,8 +756,8 @@ h2
 /* coeur resto */
 .resto__coeur
 {
-	position: relative;
-    margin-left: 45rem;
+	display: flex;
+	justify-content: center;
 }
 
 /* Footer */
@@ -1249,6 +1249,9 @@ footer .fa-utensils, footer .fa-hands-helping
 		top: 4rem;
 	}
 
+	.btn__commande{
+		display: unset;
+	}
 
 	/* Coeur */
 	@keyframes coeur
