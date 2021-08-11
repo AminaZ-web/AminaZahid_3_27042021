@@ -4,55 +4,70 @@
     z-index: 1;
     position: relative;
     margin-top: 13rem;
+    font-family: Roboto;
+    font-weight: bold;
   }
 
 .menubloc{
   display: flex;
   overflow: hidden;
   justify-content: space-between;
+  
 }
 
 .menu__text{
   white-space: nowrap;
   text-overflow: clip;
   overflow: hidden;
+  text-overflow: ellipsis;
   display: flex;
   text-align: left;
   flex-direction: column;
   font-size: 16px;
+  font-family: Roboto;
 }
 
 h2{
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   font-size: 14px;
   margin-left: 10px;
+  font-family: Roboto;
+  margin-left: 15px;
+  font-weight: bold;
 }
 .menu__presentation{
   font-size: 14px;
   margin: 0px;
+  font-family: Roboto;
+  overflow: hidden;
 }
 
 .menu__prix{
   align-self: flex-end;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Roboto;
+  position: absolute;
+  left: 16rem;
+  transition: transform 1000ms ease-out;
+}
+
+.menubloc:hover>.menu__prix{
+  transform: translateX(-4.5rem);
 }
 .checkbox{
   display: flex;
     background: lightblue;
     justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 50px;
     opacity: 0;
-    transition-duration: 0.7s;
+    border-radius: 0px 20px 20px 0px;
 }
 
- .checkbox:hover{
-  margin-right: -22px;
-  cursor: pointer;
-  animation:check 2s ease-in-out forwards;
-}
 
-.menubloc:hover > i{
-  animation:check 2s ease-in-out forwards;
+.menubloc:hover>.checkbox{
+  animation:check 1s ease-in-out forwards;
 }
 
 i{
@@ -60,7 +75,7 @@ i{
   font-size: 20px;
 }
    
-.menublock:hover i{
+.menubloc:hover i{
   transform: rotate(1turn);
   transition: 450ms 200ms ease-out;
 }
@@ -77,6 +92,15 @@ i{
   
 }
 
+ /* @keyframes prix{
+  from{
+    transform:translateX(400px)
+  }
+  to{
+    transform:translateX(0px)
+  }
+}
+*/
 
     .menu__titre__plats{
      
@@ -109,7 +133,6 @@ i{
         margin-left: 17px;
         margin-right: 0px;
         margin-top: 10px;
-        padding: 8px 8px 8px 0px;
         animation: checkbox 1s 0.5s forwards;
         -webkit-animation: apparition 1s both;
                 animation: apparition 1s both;
@@ -126,8 +149,8 @@ i{
             font-size: 16px;
             font-weight: bolder;
             margin-left: 1rem;
-            margin-bottom: 0px;
-            margin-top: 0px;
+            margin-bottom: 5px;
+            margin-top: 10px;
           }
           .menu .menu__ligne2 {
             display: -webkit-box;
@@ -148,6 +171,7 @@ i{
           .menu .menu__presentation {
             font-size: 14px;
             margin-left: 1rem;
+            margin-bottom: 10px;
           }
           .menu .menu__prix {
             font-size: 14px;
