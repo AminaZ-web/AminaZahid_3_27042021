@@ -1,6 +1,10 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
-
+$color-coeur:linear-gradient( $primaire , $secondaire);
 $texte: Roboto;
 $titre: Shrikhand;
+$margin-corps: 1rem;
+$w_img : 320px;
+$h_img : 180px;
+$shadow:0px 5px 10px lightgray;

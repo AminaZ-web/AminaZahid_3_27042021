@@ -1,6 +1,7 @@
 @charset "UTF-8";
-/* Desktop */
-/* Variable */
+/* Variables */
+/* Mixins */
+/* ------Desktop------ */
 /* Loader */
 .container {
   width: 100%;
@@ -88,12 +89,12 @@
 @-webkit-keyframes apparition {
   from {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
     opacity: 0;
   }
   to {
     -webkit-transform: translateY(1rem);
-    transform: translateY(1rem);
+            transform: translateY(1rem);
     opacity: 1;
   }
 }
@@ -101,12 +102,78 @@
 @keyframes apparition {
   from {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
     opacity: 0;
   }
   to {
     -webkit-transform: translateY(1rem);
-    transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes check {
+  from {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  from {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes prix {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes prix {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
@@ -151,15 +218,6 @@ header {
      object-fit: cover;
   width: 100%;
   height: 15.66rem;
-}
-
-.imagebg_r2 {
-  height: 35%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  z-index: 0;
-  position: fixed;
 }
 
 /* Localisation */
@@ -621,32 +679,6 @@ h2 {
           transform: translateX(-4.5rem);
 }
 
-@-webkit-keyframes check {
-  from {
-    -webkit-transform: translateX(40px);
-            transform: translateX(40px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes check {
-  from {
-    -webkit-transform: translateX(40px);
-            transform: translateX(40px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .menu_btn {
   text-align: center;
   margin-bottom: 50px;
@@ -675,24 +707,6 @@ h2 {
 }
 
 /* Coeur */
-@-webkit-keyframes coeur {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes coeur {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .coeur__1 {
   position: relative;
   font-size: 25px;
@@ -711,6 +725,25 @@ h2 {
 }
 
 .coeur__2:hover {
+  -webkit-animation: coeur 1s ease-in-out both;
+          animation: coeur 1s ease-in-out both;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coeur__2--r {
+  position: relative;
+  font-size: 25px;
+  opacity: 0;
+  left: 263px;
+  bottom: 3rem;
+  display: inline;
+}
+
+.coeur__2--r:hover {
   -webkit-animation: coeur 1s ease-in-out both;
           animation: coeur 1s ease-in-out both;
   cursor: pointer;
@@ -770,32 +803,6 @@ footer .fa-utensils, footer .fa-hands-helping {
 }
 
 @media screen and (max-width: 480px) {
-  /* Variable */
-  /* Keyframes */
-  @-webkit-keyframes apparition {
-    from {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateY(1rem);
-              transform: translateY(1rem);
-      opacity: 1;
-    }
-  }
-  @keyframes apparition {
-    from {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateY(1rem);
-              transform: translateY(1rem);
-      opacity: 1;
-    }
-  }
   /* Position flex */
   .header__logo {
     display: -webkit-box;
@@ -1192,50 +1199,6 @@ footer .fa-utensils, footer .fa-hands-helping {
     -webkit-transition: 450ms 200ms ease-out;
     transition: 450ms 200ms ease-out;
   }
-  @-webkit-keyframes check {
-    from {
-      -webkit-transform: translateX(40px);
-              transform: translateX(40px);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @keyframes check {
-    from {
-      -webkit-transform: translateX(40px);
-              transform: translateX(40px);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes prix {
-    from {
-      -webkit-transform: translateX(200px);
-              transform: translateX(200px);
-    }
-    to {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
-  }
-  @keyframes prix {
-    from {
-      -webkit-transform: translateX(200px);
-              transform: translateX(200px);
-    }
-    to {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
-  }
   .menu_btn {
     text-align: center;
     margin-bottom: 50px;
@@ -1260,30 +1223,6 @@ footer .fa-utensils, footer .fa-hands-helping {
     display: unset;
   }
   /* Coeur */
-  @-webkit-keyframes coeur {
-    from {
-      opacity: 0;
-      -webkit-transform: scale(0);
-              transform: scale(0);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-  }
-  @keyframes coeur {
-    from {
-      opacity: 0;
-      -webkit-transform: scale(0);
-              transform: scale(0);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-  }
   .coeur__1 {
     position: relative;
     font-size: 25px;
@@ -1314,6 +1253,7 @@ footer .fa-utensils, footer .fa-hands-helping {
     position: relative;
     margin-left: 3rem;
     top: 5.8rem;
+    display: block;
   }
   /* Footer */
   footer {

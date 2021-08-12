@@ -1,0 +1,32 @@
+@mixin position-flex
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+text-align: center}
+
+@mixin taille-police-h1
+{
+	font-size: 25px;
+}
+
+@mixin radius
+{
+	border: lightgray;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 0px 2px 5px 1px lightgrey;
+}
+
+@mixin btn_grand
+{
+	text-align: center;
+	margin-bottom: 50px;
+	width: 50%;
+	cursor: pointer;
+	@include radius();
+	padding: 15px;
+	border:  1px ;
+	font-family: $texte;
+	color: white;
+	background: linear-gradient(to top left,$primaire 20%, $secondaire,);
+}

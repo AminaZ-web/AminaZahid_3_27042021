@@ -1,47 +1,11 @@
-/* Desktop */
-/* Variable */
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire: #99E2D0;
-$color-coeur:linear-gradient( $primaire , $secondaire);
-$texte: Roboto;
-$titre: Shrikhand;
-$margin-corps: 1rem;
-$w_img : 320px;
-$h_img : 180px;
-$shadow:0px 5px 10px lightgray;
-@mixin position-flex
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-text-align: center}
+/* Variables */
+@import "../Utils/variable";
+/* Mixins */
+@import "../Utils/mixin";
 
-@mixin taille-police-h1
-{
-	font-size: 25px;
-}
 
-@mixin radius
-{
-	border: lightgray;
-	border-radius: 20px 20px 20px 20px;
-	box-shadow: 0px 2px 5px 1px lightgrey;
-}
+									/* ------Desktop------ */
 
-@mixin btn_grand
-{
-	text-align: center;
-	margin-bottom: 50px;
-	width: 50%;
-	cursor: pointer;
-	@include radius();
-	padding: 15px;
-	border:  1px ;
-	font-family: $texte;
-	color: white;
-	background: linear-gradient(to top left,$primaire 20%, $secondaire,);
-}
 
 /* Loader */
 .container
@@ -85,70 +49,7 @@ text-align: center}
 	animation: spin 2s ease-in-out infinite;
 }
 
-@keyframes loadfond
-{
-	from
-	{
-		opacity: 1;
-		z-index: 3;
-	}
-
-	to
-	{
-		opacity: 0;
-		z-index: -2;
-	}
-}
-
-@keyframes spin
-{
-	from
-	{
-		transform: rotate(0);
-	}
-
-	to
-	{
-		transform: rotate(360deg);
-	}
-
-}
-
-@-webkit-keyframes apparition
-{
-	from
-	{
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		opacity: 0;
-	}
-
-	to
-	{
-		-webkit-transform: translateY(1rem);
-		transform: translateY(1rem);
-		opacity: 1;
-	}
-
-}
-
-@keyframes apparition
-{
-	from
-	{
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		opacity: 0;
-	}
-
-	to
-	{
-		-webkit-transform: translateY(1rem);
-		transform: translateY(1rem);
-		opacity: 1;
-	}
-
-}
+@import "../Utils/keyframes";
 
 /* Position flex */
 .header__logo
@@ -197,15 +98,7 @@ header
 	height: 15.66rem;
 }
 
-.imagebg_r2
-{
-	height: 35%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	width: 100%;
-	z-index: 0;
-	position: fixed;
-}
+
 
 /* Localisation */
 .acceuil__localisation
@@ -662,17 +555,6 @@ h2
 	transform: translateX(-4.5rem);
   }
 
-  @keyframes check {
-	from{
-	  transform: translateX(40px);
-	  opacity: 0;
-	}
-	to{
-	  transform:translateX(0);
-	  opacity: 1;
-	}
-	
-  }
 
 .menu_btn
 {
@@ -697,33 +579,6 @@ h2
 	margin-top: 65px;
 }
 /* Coeur */
-@-webkit-keyframes coeur
-{
-	from
-	{
-		opacity: 0;
-	}
-
-	to
-	{
-		opacity: 1;
-	}
-
-}
-
-@keyframes coeur
-{
-	from
-	{
-		opacity: 0;
-	}
-
-	to
-	{
-		opacity: 1;
-	}
-
-}
 
 .coeur__1
 {
@@ -742,14 +597,32 @@ h2
 	left: 259px;
 	bottom: 3rem;
 	display: inline;
-	&:hover
-	{
-		animation: coeur 1s ease-in-out both;
-		cursor: pointer  ;
-		background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
-		-webkit-background-clip : text;
-		-webkit-text-fill-color:transparent;
-	}
+		&:hover
+		{
+			animation: coeur 1s ease-in-out both;
+			cursor: pointer  ;
+			background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
+			-webkit-background-clip : text;
+			-webkit-text-fill-color:transparent;
+		}
+
+}
+
+.coeur__2--r{
+	position: relative;
+	font-size: 25px;
+	opacity: 0;
+	left: 263px;
+	bottom: 3rem;
+	display: inline;
+		&:hover
+		{
+			animation: coeur 1s ease-in-out both;
+			cursor: pointer  ;
+			background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
+			-webkit-background-clip : text;
+			-webkit-text-fill-color:transparent;
+		}
 
 }
 
@@ -799,65 +672,9 @@ footer .fa-utensils, footer .fa-hands-helping
 
 @media screen and (max-width:480px)
 {
-	/* Variable */
-	$primaire: #9356DC;
-	$secondaire: #FF79DA;
-	$tertiaire: #99E2D0;
-	$color-coeur:linear-gradient( $primaire , $secondaire);
-	$texte: Roboto;
-	$titre: Shrikhand;
-	$margin-corps: 1rem;
-	$w_img : 320px;
-	$h_img : 180px;
-	$shadow:0px 5px 10px lightgray;
-	@mixin position-flex
-	{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	text-align: center}
 
-	@mixin taille-police-h1
-	{
-		font-size: 25px;
-	}
 
-	@mixin radius
-	{
-		border: lightgray;
-		border-radius: 20px 20px 20px 20px;
-		box-shadow: 0px 2px 5px 1px lightgrey;
-	}
-
-	@mixin btn_grand
-	{
-		text-align: center;
-		margin-bottom: 50px;
-		width: 50%;
-		cursor: pointer;
-		@include radius();
-		padding: 15px;
-		border:  1px ;
-		font-family: $texte;
-		color: white;
-		background: linear-gradient(to top left,$primaire 20%, $secondaire,);
-	}
-
-	/* Keyframes */
-	@keyframes apparition
-	{
-		from
-		{
-			transform: translateY(0);
-			opacity:0;
-		}
-
-		to
-		{
-			transform: translateY(1rem);
-			opacity:1;
-		}
-	}
+	
 
 	/* Position flex */
 	.header__logo
@@ -1218,26 +1035,7 @@ footer .fa-utensils, footer .fa-hands-helping
 		transition: 450ms 200ms ease-out;
 	  }
 	  
-	  @keyframes check {
-		from{
-		  transform: translateX(40px);
-		  opacity: 0;
-		}
-		to{
-		  transform:translateX(0);
-		  opacity: 1;
-		}
-		
-	  }
 	  
-	 @keyframes prix{
-		from{
-		  transform:translateX(200px)
-		}
-		to{
-		  transform:translateX(0px)
-		}
-	  }
 	
 
 	.menu_btn
@@ -1254,21 +1052,7 @@ footer .fa-utensils, footer .fa-hands-helping
 	}
 
 	/* Coeur */
-	@keyframes coeur
-	{
-		from
-		{
-			opacity: 0;
-			transform: scale(0);
-		}
-
-		to
-		{
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-
+	
 	.coeur__1
 	{
 		position:relative;
@@ -1303,6 +1087,7 @@ footer .fa-utensils, footer .fa-hands-helping
 		position: relative;
 		margin-left: 3rem;
 		top: 5.8rem;
+		display: block;
 	}
 
 	/* Footer */
