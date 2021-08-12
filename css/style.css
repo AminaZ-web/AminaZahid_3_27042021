@@ -1,47 +1,7 @@
 @charset "UTF-8";
 /* Variables */
 /* Mixins */
-/* ------Desktop------ */
-/* Loader */
-.container {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-animation: loadfond 3s ease 1.5s both;
-  animation: loadfond 3s ease 1.5s both;
-}
-
-.load {
-  border-radius: 50px;
-  border: 5px solid transparent;
-  display: inline-block;
-  position: relative;
-  right: 5px;
-  left: 5px;
-  top: 5px;
-  bottom: 5px;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  border-top-color: #9356DC;
-  border-bottom-color: #9356DC;
-  border-right-color: #FF79DA;
-  border-left-color: #FF79DA;
-  -webkit-animation: spin 2s ease-in-out infinite;
-  animation: spin 2s ease-in-out infinite;
-}
-
+/* Keyframes*/
 @-webkit-keyframes loadfond {
   from {
     opacity: 1;
@@ -52,7 +12,6 @@
     z-index: -2;
   }
 }
-
 @keyframes loadfond {
   from {
     opacity: 1;
@@ -178,6 +137,47 @@
   }
 }
 
+/* ------Desktop------ */
+/* Loader */
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-animation: loadfond 3s ease 1.5s both;
+  animation: loadfond 3s ease 1.5s both;
+}
+
+.load {
+  border-radius: 50px;
+  border: 5px solid transparent;
+  display: inline-block;
+  position: relative;
+  right: 5px;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  border-right-color: #FF79DA;
+  border-left-color: #FF79DA;
+  -webkit-animation: spin 2s ease-in-out infinite;
+  animation: spin 2s ease-in-out infinite;
+}
+
 /* Position flex */
 .header__logo {
   display: -webkit-box;
@@ -287,7 +287,7 @@ header {
   border: lightgray;
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-  box-shadow: 0px 2px 5px 1px lightgrey;
+          box-shadow: 0px 2px 5px 1px lightgrey;
   padding: 15px;
   border: 1px;
   font-family: Roboto;
@@ -302,11 +302,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -330,11 +330,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   margin-left: 10px;
   -ms-flex-wrap: wrap;
@@ -345,7 +345,7 @@ header {
   border: lightgray;
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-  box-shadow: 0px 2px 5px 1px lightgrey;
+          box-shadow: 0px 2px 5px 1px lightgrey;
   font-family: Roboto;
   padding: 20px;
   margin-bottom: 15px;
@@ -434,7 +434,7 @@ header {
   margin-top: 3%;
   border-radius: 25px;
   -webkit-box-shadow: 0px 5px 10px lightgray;
-  box-shadow: 0px 5px 10px lightgray;
+          box-shadow: 0px 5px 10px lightgray;
   width: 330px;
   margin-bottom: 10px;
   position: relative;
@@ -444,14 +444,14 @@ header {
 
 .resto .resto__plat:hover {
   -webkit-transform: scale(1.06);
-  transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 .resto .resto__plat__img {
   width: 330px;
   height: 180px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 25px 25px 0px 0px;
 }
 
@@ -477,16 +477,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   border-bottom: solid lightgrey 1px;
   -webkit-box-shadow: 0px 5px 10px lightgray;
-  box-shadow: 0px 5px 10px lightgray;
+          box-shadow: 0px 5px 10px lightgray;
 }
 
 .header .header__logo {
@@ -612,16 +609,15 @@ i.fas.fa-arrow-left {
   border: lightgray;
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-  box-shadow: 0px 2px 5px 1px lightgrey;
-  -webkit-box-shadow: 0px 5px 10px lightgray;
-  box-shadow: 0px 5px 10px lightgray;
+          box-shadow: 0px 2px 5px 1px lightgrey;
   width: 100%;
   margin-left: 17px;
   margin-right: 30px;
   margin-top: 10px;
-  animation: checkbox 1s 0.5s forwards;
+  -webkit-animation: checkbox 1s 0.5s forwards;
+          animation: checkbox 1s 0.5s forwards;
   -webkit-animation: apparition 1s both;
-  animation: apparition 1s both;
+          animation: apparition 1s both;
 }
 
 .menu .menubloc.menubloc__1 {
@@ -642,7 +638,7 @@ i.fas.fa-arrow-left {
 .menu .menubloc:hover {
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
 h2 {
@@ -802,6 +798,7 @@ footer .fa-utensils, footer .fa-hands-helping {
   margin-right: 15px;
 }
 
+/*---- Mobile -----*/
 @media screen and (max-width: 480px) {
   /* Position flex */
   .header__logo {

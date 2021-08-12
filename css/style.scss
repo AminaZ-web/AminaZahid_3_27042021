@@ -2,6 +2,8 @@
 @import "../Utils/variable";
 /* Mixins */
 @import "../Utils/mixin";
+/* Keyframes*/
+@import "../Utils/keyframes";
 
 
 									/* ------Desktop------ */
@@ -41,15 +43,15 @@
 	border-radius: 50px;
 	width: 50px;
 	height: 50px;
-	border-top-color: #9356DC;
-	border-bottom-color: #9356DC;
-	border-right-color: #FF79DA;
-	border-left-color: #FF79DA;
+	border-top-color: $primaire;
+	border-bottom-color: $primaire;
+	border-right-color:$secondaire;
+	border-left-color: $secondaire;
 	-webkit-animation: spin 2s ease-in-out infinite;
 	animation: spin 2s ease-in-out infinite;
 }
 
-@import "../Utils/keyframes";
+
 
 /* Position flex */
 .header__logo
@@ -69,7 +71,7 @@
 /* Général */
 body
 {
-	font-family: Roboto;
+	font-family: $texte;
 	border: none;
 	margin: 0px;
 }
@@ -122,7 +124,7 @@ header
 
 .acceuil__localisation .search
 {
-	font-family: Roboto, sans-serif;
+	font-family: $texte, sans-serif;
 	border: none;
 	padding-left: 20px;
 	outline: none;
@@ -170,13 +172,10 @@ header
 	margin-bottom: 50px;
 	width: 20%;
 	cursor: pointer;
-	border: lightgray;
-	border-radius: 20px 20px 20px 20px;
-	-webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-	box-shadow: 0px 2px 5px 1px lightgrey;
+	@include radius;
 	padding: 15px;
 	border: 1px;
-	font-family: Roboto;
+	font-family: $texte;
 	color: white;
 	background: -webkit-gradient(linear, right bottom, left top, color-stop(20%, #9356DC), to(#FF79DA));
 	background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
@@ -185,16 +184,7 @@ header
 /*Fonctionnement */
 .fct__btn
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	text-align: center;
+	@include position-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
@@ -204,21 +194,16 @@ header
 	font-size: 25px;
 	margin-top: 30px;
 	padding-top: 45px;
-	font-family: Roboto;
+	font-family: $texte;
 	position: relative;
 	text-align: center;
 }
 
 .fct__choix
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
+	
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
 	margin-left: 10px;
@@ -227,18 +212,14 @@ header
 
 .fct__btn1
 {
-	border: lightgray;
-	border-radius: 20px 20px 20px 20px;
-	-webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-	box-shadow: 0px 2px 5px 1px lightgrey;
-	font-family: Roboto;
+	@include radius;
+	font-family: $texte;
 	padding: 20px;
 	margin-bottom: 15px;
 	margin-top: 20px;
 	background: #f6f6f6;
 	width: 20rem;
 	z-index: 0;
-	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
 
@@ -322,18 +303,15 @@ header
 	background: white;
 	margin-top: 3%;
 	border-radius: 25px;
-	-webkit-box-shadow: 0px 5px 10px lightgray;
 	box-shadow: 0px 5px 10px lightgray;
 	width: 330px;
 	margin-bottom: 10px;
 	position: relative;
-	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
 
 .resto .resto__plat:hover
 {
-	-webkit-transform: scale(1.06);
 	transform: scale(1.06);
 }
 
@@ -341,7 +319,6 @@ header
 {
 	width: 330px;
 	height: 180px;
-	-o-object-fit: cover;
 	object-fit: cover;
 	border-radius: 25px 25px 0px 0px;
 }
@@ -368,18 +345,11 @@ header
 /*Header*/
 .header
 {
-	display: -webkit-box;
-	display: -ms-flexbox;
+	
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
 	border-bottom: solid lightgrey 1px;
-	-webkit-box-shadow: 0px 5px 10px lightgray;
 	box-shadow: 0px 5px 10px lightgray;
 }
 
@@ -400,7 +370,7 @@ i.fas.fa-arrow-left
 
 .resto__titre
 {
-	font-family: Shrikhand;
+	font-family: $titre;
 	margin-bottom: 0px;
 	margin-top: 0rem;
 	padding-top: 20px;
@@ -425,7 +395,7 @@ i.fas.fa-arrow-left
 	text-align: left;
 	flex-direction: column;
 	font-size: 16px;
-	font-family: Roboto;
+	font-family: $texte;
   }
 
 .menu__desktop{
@@ -485,21 +455,15 @@ i.fas.fa-arrow-left
 .menu .menubloc
 {
 	display: flex;
-  overflow: hidden;
-  justify-content: space-between;
+  	overflow: hidden;
+  	justify-content: space-between;
 	background: white;
-	border: lightgray;
-	border-radius: 20px 20px 20px 20px;
-	-webkit-box-shadow: 0px 2px 5px 1px lightgrey;
-	box-shadow: 0px 2px 5px 1px lightgrey;
-	-webkit-box-shadow: 0px 5px 10px lightgray;
-	box-shadow: 0px 5px 10px lightgray;
+	@include radius;
 	width: 100%;
 	margin-left: 17px;
 	margin-right: 30px;
 	margin-top: 10px;
 	animation: checkbox 1s 0.5s forwards;
-	-webkit-animation: apparition 1s both;
 	animation: apparition 1s both;
 	&.menubloc__1
 	{
@@ -520,7 +484,6 @@ i.fas.fa-arrow-left
 .menu .menubloc:hover
 {
 	cursor: pointer;
-	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
@@ -544,12 +507,12 @@ h2
 	font-size: 14px;
 	margin-right: 0px;
 	align-self: flex-end;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-family: Roboto;
-  position: absolute;
-  left: 16rem;
-  transition: transform 1000ms ease-out;
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-family: $texte;
+	position: absolute;
+	left: 16rem;
+	transition: transform 1000ms ease-out;
 }
 .menubloc:hover>.menu__prix{
 	transform: translateX(-4.5rem);
@@ -568,7 +531,7 @@ h2
 	box-shadow: 0px 2px 5px 1px lightgrey;
 	padding: 15px;
 	border: 1px;
-	font-family: Roboto;
+	font-family: $texte;
 	color: white;
 	background: -webkit-gradient(linear, right bottom, left top, color-stop(20%, #9356DC), to(#FF79DA));
 	background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
@@ -668,14 +631,10 @@ footer .fa-utensils, footer .fa-hands-helping
 	margin-right: 15px;
 }
 
-
+							/*---- Mobile -----*/
 
 @media screen and (max-width:480px)
 {
-
-
-	
-
 	/* Position flex */
 	.header__logo
 	{
@@ -740,18 +699,18 @@ footer .fa-utensils, footer .fa-hands-helping
 		background: #F6F6F6;
 		@include position-flex();
 		flex-direction: column;
-		&__titre
-		{
-			@include taille-police-h1();
-			margin-bottom: 0px;
-		}
+			&__titre
+			{
+				@include taille-police-h1();
+				margin-bottom: 0px;
+			}
 
-		&__presentation
-		{
-			font-weight: lighter;
-			margin-bottom: 30px;
-			font-size: 20px;
-		}
+			&__presentation
+			{
+				font-weight: lighter;
+				margin-bottom: 30px;
+				font-size: 20px;
+			}
 	}
 
 	.explorer__btn
@@ -875,9 +834,9 @@ footer .fa-utensils, footer .fa-hands-helping
 			margin-bottom: 10px;
 			position: relative;
 			transition: 0.5s;
-			&:hover
-			{
-			transform:scale(1.06)}
+				&:hover
+				{
+				transform:scale(1.06)}
 		}
 
 		.resto__plat__img
@@ -976,7 +935,7 @@ footer .fa-utensils, footer .fa-hands-helping
 		text-align: left;
 		flex-direction: column;
 		font-size: 16px;
-		font-family: Roboto;
+		font-family: $texte;
 	  }
 	  
 	  h2{
@@ -984,14 +943,14 @@ footer .fa-utensils, footer .fa-hands-helping
 		font-size: 16px;
 		white-space: nowrap;
 		margin-left: 10px;
-		font-family: Roboto;
+		font-family: $texte;
 		margin-left: 15px;
 		margin-top: 11px;
 	  }
 	  .menu__presentation{
 		font-size: 14px;
 		margin: 0px;
-		font-family: Roboto;
+		font-family: $texte;
 		margin-bottom: 11px;
 		margin-top: 6px;
 		text-overflow: ellipsis;
@@ -1003,7 +962,7 @@ footer .fa-utensils, footer .fa-hands-helping
 		align-self: flex-end;
   		font-weight: bold;
   		margin-bottom: 10px;
-  		font-family: Roboto;
+  		font-family: $texte;
   		position: absolute;
   		left: 16rem;
   		transition: transform 1000ms ease-out;
