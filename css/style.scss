@@ -1,14 +1,11 @@
+
 /* Variables */
 @import "../Utils/variable";
 /* Mixins */
 @import "../Utils/mixin";
 /* Keyframes*/
 @import "../Utils/keyframes";
-
-
-									/* ------Desktop------ */
-
-
+/* ------Desktop------ */
 /* Loader */
 .container
 {
@@ -22,6 +19,7 @@
 	align-items: center;
 	animation: loadfond 3s ease 1.5s both;
 }
+
 .load
 {
 	border-radius: 50px;
@@ -41,7 +39,6 @@
 	border-left-color: $secondaire;
 	animation: spin 2s ease-in-out infinite;
 }
-
 
 /* Général */
 body
@@ -76,8 +73,6 @@ header
 	height: 55rem;
 }
 
-
-
 /* Localisation */
 .acceuil__localisation
 {
@@ -109,9 +104,9 @@ header
 	font-size: 16px;
 }
 
-.fa-map-marker-alt{
+.fa-map-marker-alt
+{
 	margin-left: 45px;
-	
 }
 
 /*Explorer nos resraurants*/
@@ -182,7 +177,6 @@ header
 
 .fct__choix
 {
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -325,7 +319,7 @@ header
 /* Pages restaurants */
 /*Header*/
 .header
-{	
+{
 	text-align: center;
 	border-bottom: solid lightgrey 1px;
 	box-shadow: 0px 5px 10px lightgray;
@@ -356,11 +350,12 @@ i.fas.fa-arrow-left
 }
 
 /*Corps*/
-
-h1{
+h1
+{
 	font-size: 30px;
 	margin-bottom: 15px;
 }
+
 .corps
 {
 	background: #f6f6f6;
@@ -370,23 +365,27 @@ h1{
 	margin-top: -13rem;
 }
 
-.menu{
+.menu
+{
 	width: 400px;
 }
-.menu__text{
-	
+
+.menu__text
+{
 	text-align: left;
 	font-family: $texte;
 	white-space: nowrap;
 	text-overflow: clip;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	&>h2{
+	&>h2
+	{
 		margin-top: 14px;
 	}
-  }
 
-  h2 
+}
+
+h2
 {
 	font-size: 20px;
 	font-weight: bold;
@@ -409,36 +408,40 @@ h1{
 	text-overflow: ellipsis;
 }
 
-.menu__desktop{
+.menu__desktop
+{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.checkbox{
+.checkbox
+{
 	display: flex;
-    background: $tertiaire;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    opacity: 0;
-    border-radius: 0px 20px 20px 0px;
-  }
-  .menubloc:hover>.checkbox{
+	background: $tertiaire;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	opacity: 0;
+	border-radius: 0px 20px 20px 0px;
+}
+
+.menubloc:hover>.checkbox
+{
 	animation:check 1s ease-in-out forwards;
-  }
+}
 
 .fa-check-circle
 {
 	color: white;
-  	font-size: 20px;
+	font-size: 20px;
 }
 
-.menubloc:hover .fa-check-circle{
+.menubloc:hover .fa-check-circle
+{
 	transform: rotate(1turn);
 	transition: 450ms 200ms ease-out;
-  }
-
+}
 
 .menu__titre__plats
 {
@@ -466,8 +469,8 @@ h1{
 .menu .menubloc
 {
 	display: flex;
-  	overflow: hidden;
-  	justify-content: space-between;
+	overflow: hidden;
+	justify-content: space-between;
 	background: white;
 	@include radius;
 	width: 100%;
@@ -476,20 +479,20 @@ h1{
 	margin-top: 10px;
 	animation: checkbox 1s 0.5s forwards;
 	animation: apparition 1s both;
-		&.menubloc__1
-		{
-			animation: apparition 1s both;
-		}
+	&.menubloc__1
+	{
+		animation: apparition 1s both;
+	}
 
-		&.menubloc__2
-		{
-			animation: apparition 2s both;
-		}
+	&.menubloc__2
+	{
+		animation: apparition 2s both;
+	}
 
-		&.menubloc__3
-		{
-			animation: apparition 3s both;
-		}
+	&.menubloc__3
+	{
+		animation: apparition 3s both;
+	}
 }
 
 .menu .menubloc:hover
@@ -497,8 +500,6 @@ h1{
 	cursor: pointer;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301);
 }
-
-
 
 .menu .menu__prix
 {
@@ -512,10 +513,11 @@ h1{
 	left: 22rem;
 	transition: transform 1000ms ease-out;
 }
-.menubloc:hover>.menu__prix{
-	transform: translateX(-3.5rem);
-  }
 
+.menubloc:hover>.menu__prix
+{
+	transform: translateX(-3.5rem);
+}
 
 .menu_btn
 {
@@ -530,13 +532,15 @@ h1{
 	color: white;
 	background: linear-gradient(to top left, $primaire 20%, $secondaire);
 }
-.btn__commande{
+
+.btn__commande
+{
 	display: flex;
 	justify-content: center;
 	margin-top: 65px;
 }
-/* Coeur */
 
+/* Coeur */
 .coeur__1
 {
 	position:relative;
@@ -554,33 +558,32 @@ h1{
 	left: 259px;
 	bottom: 3rem;
 	display: inline;
-		&:hover
-		{
-			animation: coeur 1s ease-in-out both;
-			cursor: pointer  ;
-			background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
-			-webkit-background-clip : text;
-			-webkit-text-fill-color:transparent;
-		}
-
+	&:hover
+	{
+		animation: coeur 1s ease-in-out both;
+		cursor: pointer  ;
+		background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
+		-webkit-background-clip : text;
+		-webkit-text-fill-color:transparent;
+	}
 }
 
-.coeur__2--r{
+.coeur__2--r
+{
 	position: relative;
 	font-size: 25px;
 	opacity: 0;
 	left: 263px;
 	bottom: 3rem;
 	display: inline;
-		&:hover
-		{
-			animation: coeur 1s ease-in-out both;
-			cursor: pointer  ;
-			background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
-			-webkit-background-clip : text;
-			-webkit-text-fill-color:transparent;
-		}
-
+	&:hover
+	{
+		animation: coeur 1s ease-in-out both;
+		cursor: pointer  ;
+		background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
+		-webkit-background-clip : text;
+		-webkit-text-fill-color:transparent;
+	}
 }
 
 /* coeur resto */
@@ -593,7 +596,6 @@ h1{
 /* Footer */
 footer
 {
-	
 	background: #414141;
 	padding: 25px;
 	text-align: center;
@@ -608,12 +610,14 @@ footer .footer__titre
 	margin-bottom: 10px;
 }
 
-.footer__text{
+.footer__text
+{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
 footer .footer_p
 {
 	color: white;
@@ -625,8 +629,7 @@ footer .fa-utensils, footer .fa-hands-helping
 	margin-right: 15px;
 }
 
-							/*---- Mobile -----*/
-
+/*---- Mobile -----*/
 @media screen and (max-width:480px)
 {
 	/* Position flex */
@@ -687,7 +690,8 @@ footer .fa-utensils, footer .fa-hands-helping
 		}
 	}
 
-	.fa-map-marker-alt{
+	.fa-map-marker-alt
+	{
 		margin-left: 55px;
 		margin-bottom: 3px;
 	}
@@ -698,18 +702,18 @@ footer .fa-utensils, footer .fa-hands-helping
 		background: #F6F6F6;
 		@include position-flex();
 		flex-direction: column;
-			&__titre
-			{
-				@include taille-police-h1();
-				margin-bottom: 0px;
-			}
+		&__titre
+		{
+			@include taille-police-h1();
+			margin-bottom: 0px;
+		}
 
-			&__presentation
-			{
-				font-weight: lighter;
-				margin-bottom: 30px;
-				font-size: 20px;
-			}
+		&__presentation
+		{
+			font-weight: lighter;
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
 	}
 
 	.explorer__btn
@@ -732,8 +736,7 @@ footer .fa-utensils, footer .fa-hands-helping
 		font-family: $texte;
 		position: relative;
 		margin-left: 45px;
-		text-align: inherit
-	}
+	text-align: inherit}
 
 	.fct__choix
 	{
@@ -833,9 +836,9 @@ footer .fa-utensils, footer .fa-hands-helping
 			margin-bottom: 10px;
 			position: relative;
 			transition: 0.5s;
-				&:hover
-				{
-				transform:scale(1.06)}
+			&:hover
+			{
+			transform:scale(1.06)}
 		}
 
 		.resto__plat__img
@@ -850,7 +853,6 @@ footer .fa-utensils, footer .fa-hands-helping
 		{
 			text-align: initial;
 		}
-
 	}
 
 	/* Pages restaurants */
@@ -879,19 +881,19 @@ footer .fa-utensils, footer .fa-hands-helping
 	.resto__titre
 	{
 		font-family: $titre;
-	    font-size: 24px;
+		font-size: 24px;
 		position: absolute;
 		margin-left: 2rem;
 		margin-top: 1rem;
 		padding-top: 0px;
-		
 	}
-	h1{
+
+	h1
+	{
 		font-size: unset;
 	}
-	/*Corps*/
 
-	
+	/*Corps*/
 	.corps
 	{
 		background: #f6f6f6;
@@ -901,13 +903,16 @@ footer .fa-utensils, footer .fa-hands-helping
 		margin-top: -3rem;
 	}
 
-	.menu__desktop{
+	.menu__desktop
+	{
 		display: unset;
 	}
 
-	.menu{
+	.menu
+	{
 		width: unset;
 	}
+
 	.menu .menubloc.menubloc__1
 	{
 		width: 92%;
@@ -917,37 +922,43 @@ footer .fa-utensils, footer .fa-hands-helping
 	.menu .menubloc.menubloc__2
 	{
 		width: 92%;
-		margin-right: 0px;	}
+		margin-right: 0px;
+	}
 
-		.menu .menubloc.menubloc__3
+	.menu .menubloc.menubloc__3
 	{
 		width: 92%;
-		margin-right: 0px;	} 
+		margin-right: 0px;
+	}
 
-	.menubloc{
+	.menubloc
+	{
 		display: flex;
 		overflow: hidden;
 		justify-content: space-between;
 		margin-right:unset;
+	}
 
-	  }
-	  
-	  .menu .menu__titre{
-		  font-size: 16px;
-	  }
-	  .menu__text{
+	.menu .menu__titre
+	{
+		font-size: 16px;
+	}
+
+	.menu__text
+	{
 		white-space: nowrap;
-	text-overflow: clip;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: flex;
-	text-align: left;
-	flex-direction: column;
+		text-overflow: clip;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: flex;
+		text-align: left;
+		flex-direction: column;
 		font-size: 16px;
 		font-family: $texte;
-	  }
-	  
-	  h2{
+	}
+
+	h2
+	{
 		white-space: nowrap;
 		text-overflow: clip;
 		overflow: hidden;
@@ -958,8 +969,10 @@ footer .fa-utensils, footer .fa-hands-helping
 		margin-left: 15px;
 		margin-top: 11px;
 		font-family: $texte;
-	  }
-	  .menu__presentation{
+	}
+
+	.menu__presentation
+	{
 		font-size: 14px;
 		margin: 0px;
 		font-family: $texte;
@@ -969,9 +982,10 @@ footer .fa-utensils, footer .fa-hands-helping
 		text-overflow: clip;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	  }
-	  
-	  .menu .menu__prix{
+	}
+
+	.menu .menu__prix
+	{
 		align-self: flex-end;
 		display: inline-block;
 		font-weight: bold;
@@ -980,33 +994,37 @@ footer .fa-utensils, footer .fa-hands-helping
 		position: absolute;
 		left: 19rem;
 		transition: transform 1000ms ease-out;
-	  }
-	  
-	  .checkbox{
-		  display: flex;
-		  background: $tertiaire;
-		  justify-content: center;
-		  align-items: center;
-		  width: 50px;
-		  opacity: 0;
-		  transition-duration: 0.7s;
-		  border-radius: 0px 20px 20px 0px;
-	  }
-	  
-	  .menubloc:hover>.checkbox{
+	}
+
+	.checkbox
+	{
+		display: flex;
+		background: $tertiaire;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		opacity: 0;
+		transition-duration: 0.7s;
+		border-radius: 0px 20px 20px 0px;
+	}
+
+	.menubloc:hover>.checkbox
+	{
 		animation:check 1s ease-in-out forwards;
-	  }
-	  
-	  .fa-check-circle{
+	}
+
+	.fa-check-circle
+	{
 		color: white;
 		font-size: 20px;
-	  }
-		 
-	  .menublock:hover .fa-check-circle{
+	}
+
+	.menublock:hover .fa-check-circle
+	{
 		transform: rotate(1turn);
 		transition: 450ms 200ms ease-out;
-	  }
-	  
+	}
+
 	.menu_btn
 	{
 		@include btn_grand();
@@ -1016,12 +1034,12 @@ footer .fa-utensils, footer .fa-hands-helping
 		top: 4rem;
 	}
 
-	.btn__commande{
+	.btn__commande
+	{
 		display: unset;
 	}
 
 	/* Coeur */
-	
 	.coeur__1
 	{
 		position:relative;
@@ -1062,11 +1080,11 @@ footer .fa-utensils, footer .fa-hands-helping
 	/* Footer */
 	footer
 	{
-	background: #414141;
-    padding: 25px;
-	flex-direction: column;
-    text-align: inherit;
-    display: flex;
+		background: #414141;
+		padding: 25px;
+		flex-direction: column;
+		text-align: inherit;
+		display: flex;
 		.footer__titre
 		{
 			color: white;
@@ -1081,7 +1099,9 @@ footer .fa-utensils, footer .fa-hands-helping
 			font-size: 16px;
 			margin-bottom: 0px;
 		}
-		.footer__text{
+
+		.footer__text
+		{
 			display: unset;
 		}
 	}
