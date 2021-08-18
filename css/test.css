@@ -28,6 +28,10 @@
 }
 
 h2{
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 5px;
   font-size: 14px;
   margin-left: 10px;
@@ -39,11 +43,15 @@ h2{
   font-size: 14px;
   margin: 0px;
   font-family: Roboto;
+  white-space: nowrap;
+  text-overflow: clip;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__prix{
   align-self: flex-end;
+  display: inline-block;
   font-weight: bold;
   margin-bottom: 10px;
   font-family: Roboto;
@@ -56,7 +64,7 @@ h2{
   transform: translateX(-4.5rem);
 }
 .checkbox{
-  display: flex;
+    display: flex;
     background: lightblue;
     justify-content: center;
     align-items: center;
@@ -84,10 +92,12 @@ i{
   from{
     transform: translateX(40px);
     opacity: 0;
+    margin-left: 0px;
   }
   to{
     transform:translateX(0);
     opacity: 1;
+    margin-left: 100px;
   }
   
 }
@@ -173,7 +183,7 @@ i{
             margin-left: 1rem;
             margin-bottom: 10px;
           }
-          .menu .menu__prix {
+           .menu__prix {
             font-size: 14px;
             margin-right: 10px;
           }

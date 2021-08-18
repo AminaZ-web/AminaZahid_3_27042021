@@ -49,10 +49,14 @@
 	from{
 	  transform: translateX(40px);
 	  opacity: 0;
+	  margin-left: 0px;
+	 
 	}
 	to{
 	  transform:translateX(0);
 	  opacity: 1;
+	  margin-left: 50px;
+	  
 	}
 	
   }
